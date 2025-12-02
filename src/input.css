@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define the keyframes for the animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation utility class */
+.animate-fadeInDown {
+  animation: fadeInDown 1s ease-out;
+}
+
+/* src/input.css (Add this after the existing fadeInDown animation) */
+
+/* Scroll Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base state: Hidden and moved down */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Target state: Visible and in place (Activated by TypeScript) */
+.fade-in-up-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

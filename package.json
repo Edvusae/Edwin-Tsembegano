@@ -1,0 +1,38 @@
+{
+  "name": "edwin-tsembegano",
+  "version": "1.0.0",
+  "description": "Malengo Project \r Cleaning Services\r Marketing Website",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:ts": "npx tsc",
+    "watch:ts": "npx tsc -w",
+    "start": "npm-run-all --parallel watch:css watch:ts",
+    "build": "npm-run-all build:css build:ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edvusae/Edwin-Tsembegano.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edvusae/Edwin-Tsembegano/issues"
+  },
+  "homepage": "https://github.com/Edvusae/Edwin-Tsembegano#readme",
+  
+  "dependencies": {
+    "npm-run-all": "^4.1.5" 
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3",  
+    "ts-node": "^10.9.2",     
+    "@types/node": "^24.10.1" 
+  }
+}
+
