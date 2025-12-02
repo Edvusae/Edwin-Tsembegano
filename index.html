@@ -135,9 +135,7 @@
                 </div>
 
                 <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                    
-
-[Image of a steam cleaning machine]
+                    [Image of a steam cleaning machine]
 
                     <div class="p-4 bg-white/90 absolute bottom-0 w-full transform translate-y-full group-hover:translate-y-0 transition duration-500">
                         <h4 class="font-semibold text-brand-secondary">Advanced Steam Cleaners</h4>
@@ -178,6 +176,66 @@
             <div class="text-center mt-12">
                 <a href="#" class="text-brand-secondary font-bold hover:underline">See more reviews on Facebook &rarr;</a>
             </div>
+        </div>
+    </section>
+
+    <section id="booking-form" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-4xl font-bold text-center text-brand-secondary mb-4">
+                Get Your Instant, Free Quote
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-12">
+                Tell us about your cleaning needs in three quick steps.
+            </p>
+
+            <form id="quote-form" class="bg-white p-8 rounded-xl shadow-2xl space-y-6">
+                
+                <div class="border-b pb-4">
+                    <h3 class="text-2xl font-semibold text-brand-primary mb-4">1. Contact Details</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" id="name" placeholder="Full Name" required 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
+                        <input type="email" id="email" placeholder="Email Address" required 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
+                        <input type="tel" id="phone" placeholder="Phone Number (Optional)" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
+                    </div>
+                </div>
+
+                <div class="border-b pb-4">
+                    <h3 class="text-2xl font-semibold text-brand-primary mb-4">2. What Needs Cleaning?</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <select id="serviceType" required 
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary appearance-none">
+                            <option value="" disabled selected>Select Service Type...</option>
+                            <option value="Residential">Residential Cleaning (Home/Apartment)</option>
+                            <option value="Commercial">Commercial Cleaning (Office/Business)</option>
+                            <option value="Specialized">Specialized/Deep Clean</option>
+                        </select>
+                        <input type="number" id="sqft" placeholder="Approx. Sq. Footage (Optional)" min="100" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-brand-primary mb-4">3. Tell Us More</h3>
+                    <textarea id="details" rows="4" placeholder="Specific cleaning needs, access notes, or preferred dates..." 
+                              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary"></textarea>
+                </div>
+
+                <div id="estimate-display" class="p-4 bg-brand-background rounded-lg text-center font-bold text-xl hidden">
+                    Estimated Cost: <span id="estimate-value" class="text-brand-primary">$---</span>
+                </div>
+                
+                <button type="submit" id="submit-button"
+                        class="w-full bg-brand-primary text-white text-xl font-bold py-4 rounded-lg 
+                               shadow-md hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.01] 
+                               focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50">
+                    Send Request & Get Quote
+                </button>
+                
+                <p id="form-message" class="text-center text-sm text-red-500"></p>
+            </form>
         </div>
     </section>
 

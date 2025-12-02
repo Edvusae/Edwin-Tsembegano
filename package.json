@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "Malengo Project \r Cleaning Services\r Marketing Website",
   "main": "index.js",
-  "scripts": {
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build:ts": "npx tsc",
-    "watch:ts": "npx tsc -w",
-    "start": "npm-run-all --parallel watch:css watch:ts",
-    "build": "npm-run-all build:css build:ts"
-  },
+"scripts": {
+  "build:css": "node node_modules\\tailwindcss\\lib\\cli.js -i ./src/input.css -o ./dist/output.css --minify",
+  "watch:css": "node node_modules\\tailwindcss\\lib\\cli.js -i ./src/input.css -o ./dist/output.css --watch",
+  "build:ts": "npx tsc",
+  "watch:ts": "npx tsc -w",
+  "start": "npm-run-all --parallel watch:css watch:ts",
+  "build": "npm-run-all build:css build:ts"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Edvusae/Edwin-Tsembegano.git"
