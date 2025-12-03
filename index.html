@@ -3,149 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Cleaning Services - Commercial & Residential</title>
+    <meta name="description" content="Elite Cleaning Services - Professional residential and commercial cleaning with state-of-the-art equipment. 24/7 emergency service. Fully insured and bonded.">
+    <title>Elite Cleaning Services - Professional Cleaning You Can Trust</title>
     
-    <link rel="stylesheet" href="./dist/output.css"> 
-
-    <!-- Tailwind CSS CDN for rapid prototyping (remove if using local build) -->
-    <script src="https://cdn.tailwindcss.com"></script
-    
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00ADB5',
+                        'brand-secondary': '#393E46',
+                        'brand-background': '#EEEEEE',
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f8f8; /* Light background for cleanliness */
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInDown {
+            animation: fadeInDown 1s ease-out;
         }
     </style>
 </head>
 <body class="text-gray-900">
 
+    <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-extrabold text-brand-primary">Elite Clean</a>
+            <a href="index.html" class="text-2xl font-extrabold text-brand-primary">Elite Clean</a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-6">
-                <a href="#services" class="text-gray-600 hover:text-brand-primary transition">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-brand-primary transition">Why Us</a>
-                <a href="#contact" class="text-gray-600 hover:text-brand-primary transition">Contact</a>
+                <a href="index.html" class="text-brand-primary font-semibold">Home</a>
+                <a href="services.html" class="text-gray-600 hover:text-brand-primary transition">Services</a>
+                <a href="why-us.html" class="text-gray-600 hover:text-brand-primary transition">Why Us</a>
+                <a href="contact.html" class="text-gray-600 hover:text-brand-primary transition">Contact</a>
             </div>
             <a href="#booking-form" class="hidden md:inline-block bg-brand-primary text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition">Book Now</a>
         </div>
-        </nav>
-
-
-    <header id="hero-section" class="relative pt-20 bg-brand-background min-h-[90vh] flex items-center overflow-hidden">
         
-        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-70" 
-             style="background-image: url('placeholder-cleaning-image.jpg');">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 space-y-3">
+                <a href="index.html" class="block text-brand-primary font-semibold">Home</a>
+                <a href="services.html" class="block text-gray-600">Services</a>
+                <a href="why-us.html" class="block text-gray-600">Why Us</a>
+                <a href="contact.html" class="block text-gray-600">Contact</a>
+                <a href="#booking-form" class="block bg-brand-primary text-white text-center py-2 rounded-lg">Book Now</a>
+            </div>
         </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <header id="hero-section" class="relative pt-20 bg-gradient-to-br from-brand-primary via-teal-500 to-cyan-600 min-h-[90vh] flex items-center overflow-hidden">
         <div class="container mx-auto px-6 py-24 relative z-10 text-center md:text-left">
-            <div class="max-w-4xl mx-auto md:mx-0">
-                <h1 class="text-6xl md:text-7xl font-extrabold text-brand-secondary leading-tight mb-4 animate-fadeInDown">
+            <div class="max-w-4xl mx-auto md:mx-0 text-white">
+                <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-4 animate-fadeInDown">
                     Spotless Results, Guaranteed.
                 </h1>
                 
-                <p class="text-2xl text-gray-700 mb-8 font-light">
-                    **Commercial & Residential Cleaning** with state-of-the-art equipment. We handle everything.
+                <p class="text-2xl mb-8 font-light">
+                    Professional Commercial & Residential Cleaning with state-of-the-art equipment. We handle everything.
                 </p>
 
                 <div class="flex items-center justify-center md:justify-start space-x-4 mb-10">
-                    <div class="flex text-yellow-500 text-xl">
+                    <div class="flex text-yellow-400 text-xl">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     </div>
-                    <span class="text-gray-600 font-semibold">4.9/5 based on 150+ reviews!</span>
+                    <span class="font-semibold">4.9/5 from 150+ reviews</span>
                 </div>
 
-                <a href="#booking-form" id="main-cta"
-                   class="inline-block bg-brand-primary text-white text-xl font-bold py-4 px-10 rounded-full 
-                          shadow-2xl hover:bg-opacity-90 transition duration-300 ease-in-out transform hover:scale-105 
-                          focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50">
-                    Get Your FREE, Instant Quote Today!
+                <a href="#booking-form" 
+                   class="inline-block bg-white text-brand-primary text-xl font-bold py-4 px-10 rounded-full 
+                          shadow-2xl hover:shadow-3xl transition duration-300 ease-in-out transform hover:scale-105">
+                    Get Your FREE Quote Today!
                 </a>
 
-                <p class="mt-4 text-sm text-gray-500">
-                    Available 24/7 for emergency and specialized cleaning. Fully Insured & Bonded.
+                <p class="mt-6 text-sm">
+                    <i class="fas fa-clock mr-2"></i>Available 24/7 for emergencies • 
+                    <i class="fas fa-shield-alt ml-4 mr-2"></i>Fully Insured & Bonded
                 </p>
             </div>
         </div>
     </header>
 
-<section id="features" class="py-20 bg-brand-background">
+    <!-- Trust Badges -->
+    <section class="py-8 bg-white shadow-md">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-brand-primary mb-1">10,000+</div>
+                    <div class="text-sm text-gray-600">Happy Clients</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-brand-primary mb-1">15+</div>
+                    <div class="text-sm text-gray-600">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-brand-primary mb-1">50+</div>
+                    <div class="text-sm text-gray-600">Trained Staff</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-brand-primary mb-1">24/7</div>
+                    <div class="text-sm text-gray-600">Emergency Service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-brand-background">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-brand-secondary mb-12">
                 The Elite Clean Advantage
             </h2>
             <div class="grid md:grid-cols-4 gap-8 text-center">
-                
                 <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="text-5xl text-brand-primary mb-3"><i class="fas fa-tools"></i></div>
                     <h3 class="text-xl font-semibold mb-2">Pro-Grade Equipment</h3>
-                    <p class="text-gray-600 text-sm">Industrial-grade machinery for deepest clean possible.</p>
+                    <p class="text-gray-600 text-sm">Industrial machinery for the deepest clean possible.</p>
                 </div>
 
                 <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="text-5xl text-brand-primary mb-3"><i class="fas fa-shield-alt"></i></div>
                     <h3 class="text-xl font-semibold mb-2">Insured & Bonded</h3>
-                    <p class="text-gray-600 text-sm">Complete peace of mind. We cover all liability.</p>
+                    <p class="text-gray-600 text-sm">$2M liability coverage for complete peace of mind.</p>
                 </div>
 
                 <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="text-5xl text-brand-primary mb-3"><i class="fas fa-check-circle"></i></div>
                     <h3 class="text-xl font-semibold mb-2">100% Guarantee</h3>
-                    <p class="text-gray-600 text-sm">If you're not happy, we re-clean for free. No questions asked.</p>
+                    <p class="text-gray-600 text-sm">Not happy? We re-clean for free. No questions asked.</p>
                 </div>
 
                 <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="text-5xl text-brand-primary mb-3"><i class="fas fa-leaf"></i></div>
-                    <h3 class="text-xl font-semibold mb-2">Eco-Friendly Solutions</h3>
-                    <p class="text-gray-600 text-sm">Safe, non-toxic products upon request.</p>
+                    <h3 class="text-xl font-semibold mb-2">Eco-Friendly</h3>
+                    <p class="text-gray-600 text-sm">Safe, non-toxic products available upon request.</p>
                 </div>
-
             </div>
         </div>
     </section>
-    
-    <section id="equipment" class="py-20 bg-white">
+
+    <!-- Services Preview -->
+    <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-brand-secondary mb-4">
-                State-of-the-Art Equipment
-            </h2>
-            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                We invest in the best technology, from industrial HEPA filtration to advanced floor scrubbers, ensuring a deeper, faster clean for every job.
-            </p>
-            
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-brand-secondary mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    From residential deep cleans to commercial maintenance, we've got you covered
+                </p>
+            </div>
+
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                    
-                    <div class="p-4 bg-white/90 absolute bottom-0 w-full transform translate-y-full group-hover:translate-y-0 transition duration-500">
-                        <h4 class="font-semibold text-brand-secondary">High-Powered Floor Scrubbers</h4>
-                        <p class="text-sm text-gray-600">For flawless, streak-free hard surface cleaning.</p>
-                    </div>
+                <div class="bg-gradient-to-br from-brand-primary to-teal-600 text-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition">
+                    <i class="fas fa-home text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Residential Cleaning</h3>
+                    <p class="mb-6">Regular house cleaning, deep cleans, and move-in/out services for spotless homes.</p>
+                    <a href="services.html#residential" class="text-white font-semibold hover:underline">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                    
-                    <div class="p-4 bg-white/90 absolute bottom-0 w-full transform translate-y-full group-hover:translate-y-0 transition duration-500">
-                        <h4 class="font-semibold text-brand-secondary">HEPA Air Filtration Systems</h4>
-                        <p class="text-sm text-gray-600">Removing 99.97% of airborne particles for superior air quality.</p>
-                    </div>
+                <div class="bg-gradient-to-br from-brand-secondary to-gray-700 text-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition">
+                    <i class="fas fa-building text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Commercial Cleaning</h3>
+                    <p class="mb-6">Office, retail, and restaurant cleaning. We work around your business schedule.</p>
+                    <a href="services.html#commercial" class="text-white font-semibold hover:underline">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
 
-                <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                    [Image of a steam cleaning machine]
-
-                    <div class="p-4 bg-white/90 absolute bottom-0 w-full transform translate-y-full group-hover:translate-y-0 transition duration-500">
-                        <h4 class="font-semibold text-brand-secondary">Advanced Steam Cleaners</h4>
-                        <p class="text-sm text-gray-600">Sanitizing surfaces without harsh chemicals.</p>
-                    </div>
+                <div class="bg-gradient-to-br from-purple-600 to-purple-800 text-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition">
+                    <i class="fas fa-star text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3">Specialized Services</h3>
+                    <p class="mb-6">Carpet cleaning, window washing, pressure washing, and post-construction cleanup.</p>
+                    <a href="services.html#specialized" class="text-white font-semibold hover:underline">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonials -->
     <section id="testimonials" class="py-20 bg-brand-background">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-brand-secondary mb-12">
@@ -153,140 +217,151 @@
             </h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                
                 <blockquote class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-brand-primary">
-                    <p class="text-lg italic text-gray-700 mb-4">"The team handled our massive office space flawlessly. Post-COVID sanitation compliance is now effortless. Highly recommend their commercial service!"</p>
+                    <div class="flex text-yellow-500 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-lg italic text-gray-700 mb-4">"The team handled our massive office space flawlessly. Post-COVID sanitation compliance is now effortless. Highly recommend!"</p>
                     <div class="font-semibold text-brand-secondary">— Alex R., Office Manager</div>
-                    <div class="flex text-yellow-500 mt-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 </blockquote>
 
                 <blockquote class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-brand-primary">
-                    <p class="text-lg italic text-gray-700 mb-4">"I couldn't believe how clean my home was after the deep clean. They paid attention to details I didn't even notice. The best residential service I've ever used."</p>
+                    <div class="flex text-yellow-500 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-lg italic text-gray-700 mb-4">"I couldn't believe how clean my home was after the deep clean. They paid attention to details I didn't even notice. The best service ever!"</p>
                     <div class="font-semibold text-brand-secondary">— Maria K., Homeowner</div>
-                    <div class="flex text-yellow-500 mt-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 </blockquote>
 
                 <blockquote class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-brand-primary">
-                    <p class="text-lg italic text-gray-700 mb-4">"Their specialized floor cleaning equipment is a game-changer. It removed years of buildup in our restaurant kitchen. Truly professional gear!"</p>
+                    <div class="flex text-yellow-500 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-lg italic text-gray-700 mb-4">"Their specialized equipment removed years of buildup in our restaurant kitchen. Truly professional gear and outstanding results!"</p>
                     <div class="font-semibold text-brand-secondary">— Sam G., Restaurant Owner</div>
-                    <div class="flex text-yellow-500 mt-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 </blockquote>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#" class="text-brand-secondary font-bold hover:underline">See more reviews on Facebook &rarr;</a>
             </div>
         </div>
     </section>
 
-    <section id="booking-form" class="py-20 bg-gray-50">
+    <!-- Booking Form -->
+    <section id="booking-form" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-3xl">
             <h2 class="text-4xl font-bold text-center text-brand-secondary mb-4">
                 Get Your Instant, Free Quote
             </h2>
             <p class="text-xl text-center text-gray-600 mb-12">
-                Tell us about your cleaning needs in three quick steps.
+                Tell us about your cleaning needs and we'll respond within 2 hours
             </p>
 
-            <form id="quote-form" class="bg-white p-8 rounded-xl shadow-2xl space-y-6">
-                
-                <div class="border-b pb-4">
-                    <h3 class="text-2xl font-semibold text-brand-primary mb-4">1. Contact Details</h3>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <input type="text" id="name" placeholder="Full Name" required 
-                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
-                        <input type="email" id="email" placeholder="Email Address" required 
-                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
-                        <input type="tel" id="phone" placeholder="Phone Number (Optional)" 
-                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
+            <form id="quote-form" class="bg-gray-50 p-8 rounded-xl shadow-2xl space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Full Name *</label>
+                        <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                        <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent">
                     </div>
                 </div>
 
-                <div class="border-b pb-4">
-                    <h3 class="text-2xl font-semibold text-brand-primary mb-4">2. What Needs Cleaning?</h3>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <select id="serviceType" required 
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary appearance-none">
-                            <option value="" disabled selected>Select Service Type...</option>
-                            <option value="Residential">Residential Cleaning (Home/Apartment)</option>
-                            <option value="Commercial">Commercial Cleaning (Office/Business)</option>
-                            <option value="Specialized">Specialized/Deep Clean</option>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                        <input type="tel" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Service Type *</label>
+                        <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent">
+                            <option value="">Select service...</option>
+                            <option value="residential">Residential Cleaning</option>
+                            <option value="commercial">Commercial Cleaning</option>
+                            <option value="deep">Deep Clean</option>
+                            <option value="specialized">Specialized Service</option>
                         </select>
-                        <input type="number" id="sqft" placeholder="Approx. Sq. Footage (Optional)" min="100" 
-                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary">
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="text-2xl font-semibold text-brand-primary mb-4">3. Tell Us More</h3>
-                    <textarea id="details" rows="4" placeholder="Specific cleaning needs, access notes, or preferred dates..." 
-                              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary"></textarea>
+                    <label class="block text-gray-700 font-semibold mb-2">Tell Us More About Your Needs</label>
+                    <textarea rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent" placeholder="Square footage, specific areas, preferred dates..."></textarea>
                 </div>
 
-                <div id="estimate-display" class="p-4 bg-brand-background rounded-lg text-center font-bold text-xl hidden">
-                    Estimated Cost: <span id="estimate-value" class="text-brand-primary">$---</span>
-                </div>
-                
-                <button type="submit" id="submit-button"
-                        class="w-full bg-brand-primary text-white text-xl font-bold py-4 rounded-lg 
-                               shadow-md hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.01] 
-                               focus:outline-none focus:ring-4 focus:ring-brand-primary focus:ring-opacity-50">
-                    Send Request & Get Quote
+                <button type="submit" class="w-full bg-brand-primary text-white text-xl font-bold py-4 rounded-lg shadow-md hover:opacity-90 transition">
+                    Send Request & Get Free Quote
                 </button>
-                
-                <p id="form-message" class="text-center text-sm text-red-500"></p>
+
+                <p id="form-message" class="text-center text-sm"></p>
             </form>
         </div>
     </section>
 
-    <footer class="bg-brand-secondary text-gray-300 py-10 border-t border-brand-primary/50">
-        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8">
+    <!-- CTA Banner -->
+    <section class="py-16 bg-gradient-to-r from-brand-primary to-teal-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">Need Emergency Cleaning?</h2>
+            <p class="text-xl mb-8">We're available 24/7 for urgent cleaning situations</p>
+            <a href="tel:5555555326" class="inline-block bg-white text-brand-primary font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition text-lg">
+                <i class="fas fa-phone mr-2"></i>Call Now: (555) 555-CLEAN
+            </a>
+        </div>
+    </section>
 
-            <div class="col-span-2 md:col-span-2">
-                <a href="#" class="text-3xl font-extrabold text-brand-primary mb-3 block">Elite Clean</a>
-                <p class="text-sm">
-                    Providing spotless, reliable, and guaranteed cleaning solutions for your home and business.
-                    We use state-of-the-art equipment for superior results.
+    <!-- Footer -->
+    <footer class="bg-brand-secondary text-gray-300 py-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-2">
+                <a href="index.html" class="text-3xl font-extrabold text-brand-primary mb-3 block">Elite Clean</a>
+                <p class="text-sm mb-4">
+                    Providing spotless, reliable cleaning solutions for homes and businesses with state-of-the-art equipment.
                 </p>
-                <div class="mt-4 text-xs">
-                    &copy; <span id="current-year"></span> Elite Cleaning Services. All Rights Reserved.
-                </div>
+                <div class="text-xs">&copy; <span id="current-year">2024</span> Elite Cleaning Services. All Rights Reserved.</div>
             </div>
 
             <div>
                 <h4 class="text-lg font-semibold mb-3 text-white">Quick Links</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#services" class="hover:text-brand-primary transition">Our Services</a></li>
-                    <li><a href="#equipment" class="hover:text-brand-primary transition">Equipment</a></li>
-                    <li><a href="#testimonials" class="hover:text-brand-primary transition">Testimonials</a></li>
+                    <li><a href="services.html" class="hover:text-brand-primary transition">Our Services</a></li>
+                    <li><a href="why-us.html" class="hover:text-brand-primary transition">Why Choose Us</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-primary transition">Contact Us</a></li>
                     <li><a href="#booking-form" class="hover:text-brand-primary transition">Get a Quote</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="text-lg font-semibold mb-3 text-white">Legal</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-brand-primary transition">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-brand-primary transition">Terms of Service</a></li>
-                    <li><a href="#" class="hover:text-brand-primary transition">Sitemap</a></li>
-                </ul>
-            </div>
-
-            <div>
                 <h4 class="text-lg font-semibold mb-3 text-white">Connect</h4>
-                <p class="text-sm">Call us 24/7:</p>
-                <a href="tel:55555525326" class="text-brand-primary font-bold hover:underline mb-3 block">(555) 555-CLEAN</a>
-                
+                <p class="text-sm mb-2">Call us 24/7:</p>
+                <a href="tel:5555555326" class="text-brand-primary font-bold hover:underline block mb-4">(555) 555-CLEAN</a>
                 <div class="flex space-x-4 text-xl">
-                    <a href="https://facebook.com/your-cleaner" target="_blank" class="hover:text-brand-primary transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://tiktok.com/@your-cleaner" target="_blank" class="hover:text-brand-primary transition"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="hover:text-brand-primary transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-brand-primary transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-primary transition"><i class="fab fa-tiktok"></i></a>
                     <a href="mailto:info@eliteclean.com" class="hover:text-brand-primary transition"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-
         </div>
     </footer>
 
-    <script src="./dist/main.js"></script> 
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Form handling
+        document.getElementById('quote-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const message = document.getElementById('form-message');
+            message.textContent = '✅ Thank you! We\'ll contact you within 2 hours.';
+            message.className = 'text-center text-sm text-green-600 font-semibold';
+            this.reset();
+        });
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
+
