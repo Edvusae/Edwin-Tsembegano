@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Elite Clean</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00ADB5',
+                        'brand-secondary': '#393E46',
+                        'brand-background': '#EEEEEE',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-brand-background">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-8">
+                <a href="index.html" class="text-2xl font-extrabold text-brand-primary">Elite Clean</a>
+                <span class="text-gray-500 text-sm hidden md:inline">Customer Portal</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <!-- Notifications -->
+                <button class="relative p-2 text-gray-600 hover:text-brand-primary transition">
+                    <i class="fas fa-bell text-xl"></i>
+                    <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                </button>
+                
+                <!-- User Menu -->
+                <div class="relative">
+                    <button id="userMenuBtn" class="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-lg transition">
+                        <div class="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center text-white font-bold">
+                            JD
+                        </div>
+                        <div class="hidden md:block text-left">
+                            <div class="text-sm font-semibold text-gray-700" id="userName">John Doe</div>
+                            <div class="text-xs text-gray-500">Customer</div>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-500 text-sm"></i>
+                    </button>
+                    
+                    <!-- Dropdown Menu -->
+                    <div id="userDropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 border">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fas fa-user mr-2"></i>My Profile
+                        </a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fas fa-cog mr-2"></i>Settings
+                        </a>
+                        <div class="border-t my-2"></div>
+                        <button id="logoutBtn" class="w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 transition">
+                            <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="pt-20">
+        <div class="container mx-auto px-6 py-8">
+            
+            <!-- Welcome Section -->
+            <div class="bg-gradient-to-r from-brand-primary to-teal-600 rounded-xl p-8 text-white mb-8">
+                <h1 class="text-3xl font-bold mb-2">Welcome back, <span id="welcomeName">John</span>! 👋</h1>
+                <p class="text-white/80">Here's what's happening with your cleaning services</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-calendar-check text-2xl text-blue-600"></i>
+                        </div>
+                        <span class="text-xs text-gray-500">This Month</span>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-1">3</div>
+                    <div class="text-sm text-gray-600">Upcoming Bookings</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-check-circle text-2xl text-green-600"></i>
+                        </div>
+                        <span class="text-xs text-gray-500">Lifetime</span>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-1">24</div>
+                    <div class="text-sm text-gray-600">Completed Services</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-star text-2xl text-yellow-600"></i>
+                        </div>
+                        <span class="text-xs text-gray-500">Loyalty</span>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-1">450</div>
+                    <div class="text-sm text-gray-600">Reward Points</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-dollar-sign text-2xl text-purple-600"></i>
+                        </div>
+                        <span class="text-xs text-gray-500">This Year</span>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800 mb-1">$2,840</div>
+                    <div class="text-sm text-gray-600">Total Spent</div>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Grid -->
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Left Column - Appointments & History -->
+                <div class="lg:col-span-2 space-y-8">
+                    
+                    <!-- Upcoming Appointments -->
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-2xl font-bold text-gray-800">Upcoming Appointments</h2>
+                            <button class="bg-brand-primary text-white px-4 py-2 rounded-lg hover:opacity-90 transition text-sm font-semibold">
+                                <i class="fas fa-plus mr-2"></i>Book New
+                            </button>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Appointment 1 -->
+                            <div class="border-l-4 border-brand-primary bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <h3 class="font-bold text-gray-800 text-lg">Deep Cleaning Service</h3>
+                                        <p class="text-gray-600 text-sm">Residential - Full House</p>
+                                    </div>
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Confirmed</span>
+                                </div>
+                                <div class="grid md:grid-cols-3 gap-3 text-sm">
+                                    <div>
+                                        <i class="fas fa-calendar text-brand-primary mr-2"></i>
+                                        <span class="text-gray-700">Dec 15, 2024</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-clock text-brand-primary mr-2"></i>
+                                        <span class="text-gray-700">10:00 AM - 2:00 PM</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-user text-brand-primary mr-2"></i>
+                                        <span class="text-gray-700">Team A (Maria & John)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3 pt-3 border-t flex gap-2">
+                                    <button class="text-brand-primary hover:underline text-sm font-semibold">
+                                        <i class="fas fa-edit mr-1"></i>Reschedule
+                                    </button>
+                                    <button class="text-red-600 hover:underline text-sm font-semibold ml-4">
+                                        <i class="fas fa-times mr-1"></i>Cancel
+                                    </button>
+                                    <button class="text-gray-600 hover:underline text-sm font-semibold ml-auto">
+                                        <i class="fas fa-info-circle mr-1"></i>Details
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Appointment 2 -->
+                            <div class="border-l-4 border-green-500 bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <h3 class="font-bold text-gray-800 text-lg">Regular Cleaning</h3>
+                                        <p class="text-gray-600 text-sm">Bi-weekly Service</p>
+                                    </div>
+                                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Recurring</span>
+                                </div>
+                                <div class="grid md:grid-cols-3 gap-3 text-sm">
+                                    <div>
+                                        <i class="fas fa-calendar text-green-500 mr-2"></i>
+                                        <span class="text-gray-700">Dec 18, 2024</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-clock text-green-500 mr-2"></i>
+                                        <span class="text-gray-700">9:00 AM - 12:00 PM</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-redo text-green-500 mr-2"></i>
+                                        <span class="text-gray-700">Every 2 weeks</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3 pt-3 border-t flex gap-2">
+                                    <button class="text-brand-primary hover:underline text-sm font-semibold">
+                                        <i class="fas fa-pause mr-1"></i>Pause Series
+                                    </button>
+                                    <button class="text-gray-600 hover:underline text-sm font-semibold ml-auto">
+                                        <i class="fas fa-cog mr-1"></i>Manage
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Appointment 3 -->
+                            <div class="border-l-4 border-purple-500 bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <h3 class="font-bold text-gray-800 text-lg">Carpet Cleaning</h3>
+                                        <p class="text-gray-600 text-sm">Specialized Service</p>
+                                    </div>
+                                    <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold">Pending</span>
+                                </div>
+                                <div class="grid md:grid-cols-3 gap-3 text-sm">
+                                    <div>
+                                        <i class="fas fa-calendar text-purple-500 mr-2"></i>
+                                        <span class="text-gray-700">Dec 20, 2024</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-clock text-purple-500 mr-2"></i>
+                                        <span class="text-gray-700">2:00 PM - 4:00 PM</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-exclamation-circle text-purple-500 mr-2"></i>
+                                        <span class="text-gray-700">Awaiting confirmation</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3 pt-3 border-t flex gap-2">
+                                    <button class="text-brand-primary hover:underline text-sm font-semibold">
+                                        <i class="fas fa-phone mr-1"></i>Contact Us
+                                    </button>
+                                    <button class="text-red-600 hover:underline text-sm font-semibold ml-auto">
+                                        <i class="fas fa-times mr-1"></i>Cancel Request
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="w-full mt-4 text-brand-primary hover:underline font-semibold text-sm">
+                            View All Appointments <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- Recent History -->
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Recent Cleaning History</h2>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-check text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Deep Cleaning</div>
+                                        <div class="text-sm text-gray-600">Dec 1, 2024 • 4 hours</div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="font-bold text-gray-800">$250</div>
+                                    <button class="text-xs text-brand-primary hover:underline">View Receipt</button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-check text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Regular Cleaning</div>
+                                        <div class="text-sm text-gray-600">Nov 20, 2024 • 3 hours</div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="font-bold text-gray-800">$120</div>
+                                    <button class="text-xs text-brand-primary hover:underline">View Receipt</button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-check text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Window Cleaning</div>
+                                        <div class="text-sm text-gray-600">Nov 15, 2024 • 2 hours</div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="font-bold text-gray-800">$85</div>
+                                    <button class="text-xs text-brand-primary hover:underline">View Receipt</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="w-full mt-4 text-brand-primary hover:underline font-semibold text-sm">
+                            View Complete History <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column - Quick Actions & Info -->
+                <div class="space-y-8">
+                    
+                    <!-- Quick Actions -->
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Quick Actions</h2>
+                        <div class="space-y-3">
+                            <button class="w-full flex items-center gap-3 p-3 bg-brand-primary text-white rounded-lg hover:opacity-90 transition">
+                                <i class="fas fa-calendar-plus text-xl"></i>
+                                <span class="font-semibold">Book New Service</span>
+                            </button>
+                            <button class="w-full flex items-center gap-3 p-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition">
+                                <i class="fas fa-redo text-xl"></i>
+                                <span class="font-semibold">Rebook Last Service</span>
+                            </button>
+                            <button class="w-full flex items-center gap-3 p-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition">
+                                <i class="fas fa-gift text-xl"></i>
+                                <span class="font-semibold">Refer a Friend</span>
+                            </button>
+                            <button class="w-full flex items-center gap-3 p-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition">
+                                <i class="fas fa-headset text-xl"></i>
+                                <span class="font-semibold">Contact Support</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Saved Payment Methods -->
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 class="text-xl font-bold text-gray-800">Payment Methods</h2>
+                            <button class="text-brand-primary hover:underline text-sm font-semibold">
+                                <i class="fas fa-plus mr-1"></i>Add
+                            </button>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 p-3 border-2 border-brand-primary bg-blue-50 rounded-lg">
+                                <i class="fab fa-cc-visa text-3xl text-blue-600"></i>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-gray-800">•••• 4242</div>
+                                    <div class="text-xs text-gray-600">Expires 12/25</div>
+                                </div>
+                                <span class="text-xs bg-brand-primary text-white px-2 py-1 rounded">Default</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 border rounded-lg hover:border-brand-primary transition">
+                                <i class="fab fa-cc-mastercard text-3xl text-orange-600"></i>
+                                <div class="flex-1">
+                                    <div class="font-semibold text-gray-800">•••• 8888</div>
+                                    <div class="text-xs text-gray-600">Expires 03/26</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loyalty Rewards -->
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl shadow-md p-6 text-white">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-xl font-bold">Loyalty Rewards</h2>
+                            <i class="fas fa-star text-3xl text-yellow-400"></i>
+                        </div>
+                        <div class="text-4xl font-bold mb-2">450 Points</div>
+                        <div class="text-white/80 text-sm mb-4">50 points until next reward!</div>
+                        <div class="bg-white/20 rounded-full h-2 mb-4">
+                            <div class="bg-yellow-400 h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <button class="w-full bg-white text-purple-700 font-semibold py-2 rounded-lg hover:bg-gray-100 transition">
+                            View Rewards Catalog
+                        </button>
+                    </div>
+
+                    <!-- Preferred Cleaner -->
+                    <div class="bg-white rounded-xl shadow-md p-6">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Your Preferred Team</h2>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                                MA
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-800">Maria Anderson</div>
+                                <div class="text-sm text-gray-600">Lead Cleaner</div>
+                                <div class="flex text-yellow-500 text-sm mt-1">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-3">Maria has completed 18 cleanings for you with a 5-star rating!</p>
+                        <button class="w-full bg-gray-100 text-gray-700 font-semibold py-2 rounded-lg hover:bg-gray-200 transition text-sm">
+                            Request Maria for Next Service
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check authentication
+        window.addEventListener('DOMContentLoaded', function() {
+            if (sessionStorage.getItem('customerLoggedIn') !== 'true') {
+                window.location.href = 'customer-login.html';
+            }
+
+            // Load user data
+            const userData = JSON.parse(sessionStorage.getItem('customerData') || '{}');
+            if (userData.name) {
+                document.getElementById('userName').textContent = userData.name;
+                const firstName = userData.name.split(' ')[0];
+                document.getElementById('welcomeName').textContent = firstName;
+            }
+        });
+
+        // User menu toggle
+        document.getElementById('userMenuBtn').addEventListener('click', function() {
+            document.getElementById('userDropdown').classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('#userMenuBtn') && !e.target.closest('#userDropdown')) {
+                document.getElementById('userDropdown').classList.add('hidden');
+            }
+        });
+
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            if (confirm('Are you sure you want to logout?')) {
+                sessionStorage.clear();
+                window.location.href = 'customer-login.html';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
