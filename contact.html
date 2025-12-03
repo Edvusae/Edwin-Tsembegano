@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Elite Cleaning Services</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00ADB5',
+                        'brand-secondary': '#393E46',
+                        'brand-background': '#EEEEEE',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-brand-primary">Elite Clean</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-brand-primary transition">Home</a>
+                <a href="services.html" class="text-gray-600 hover:text-brand-primary transition">Services</a>
+                <a href="why-us.html" class="text-gray-600 hover:text-brand-primary transition">Why Us</a>
+                <a href="contact.html" class="text-brand-primary font-semibold">Contact</a>
+            </div>
+            <a href="#contact-form" class="hidden md:inline-block bg-brand-primary text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-brand-primary to-teal-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Get In Touch</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                We're here to answer your questions and provide you with a free quote. Contact us today!
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Phone -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition">
+                    <div class="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone text-3xl text-brand-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-secondary mb-4">Call Us 24/7</h3>
+                    <a href="tel:5555555326" class="text-2xl font-bold text-brand-primary hover:underline block mb-2">(555) 555-CLEAN</a>
+                    <p class="text-gray-600">Available for emergencies anytime</p>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition">
+                    <div class="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-3xl text-brand-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-secondary mb-4">Email Us</h3>
+                    <a href="mailto:info@eliteclean.com" class="text-xl text-brand-primary hover:underline block mb-2">info@eliteclean.com</a>
+                    <p class="text-gray-600">We respond within 2 hours</p>
+                </div>
+
+                <!-- Location -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition">
+                    <div class="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-3xl text-brand-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-secondary mb-4">Visit Our Office</h3>
+                    <p class="text-gray-700 mb-2">123 Clean Street<br>Suite 100<br>Your City, ST 12345</p>
+                    <p class="text-gray-600">Mon-Fri: 8AM-6PM</p>
+                </div>
+            </div>
+
+            <!-- Contact Form and Map -->
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div id="contact-form">
+                    <h2 class="text-3xl font-bold text-brand-secondary mb-6">Send Us a Message</h2>
+                    <form class="bg-white p-8 rounded-xl shadow-lg space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">First Name *</label>
+                                <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Last Name *</label>
+                                <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                            <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent" placeholder="john.doe@example.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                            <input type="tel" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent" placeholder="(555) 123-4567">
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Service Type *</label>
+                            <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent">
+                                <option value="">Select a service...</option>
+                                <option value="residential">Residential Cleaning</option>
+                                <option value="commercial">Commercial Cleaning</option>
+                                <option value="deep-clean">Deep Cleaning</option>
+                                <option value="move-in-out">Move In/Out</option>
+                                <option value="specialized">Specialized Service</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Property Size (sq ft)</label>
+                            <input type="number" min="100" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent" placeholder="e.g., 2000">
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Preferred Date</label>
+                            <input type="date" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent">
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Message *</label>
+                            <textarea required rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent" placeholder="Tell us about your cleaning needs..."></textarea>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input type="checkbox" required class="mt-1 mr-3">
+                            <label class="text-sm text-gray-600">I agree to receive communications from Elite Clean and understand my information will be handled according to the Privacy Policy *</label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-primary text-white font-bold py-4 rounded-lg hover:opacity-90 transition text-lg">
+                            Send Message & Get Free Quote
+                        </button>
+
+                        <p class="text-center text-sm text-gray-500">
+                            We typically respond within 2 hours during business hours
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Map and Additional Info -->
+                <div>
+                    <h2 class="text-3xl font-bold text-brand-secondary mb-6">Our Service Areas</h2>
+                    
+                    <!-- Placeholder for Map -->
+                    <div class="bg-gray-200 rounded-xl h-64 flex items-center justify-center mb-8 overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+                            width="100%" 
+                            height="256" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <!-- Service Areas -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                        <h3 class="text-xl font-bold text-brand-secondary mb-4 flex items-center">
+                            <i class="fas fa-map text-brand-primary mr-3"></i>
+                            Areas We Serve
+                        </h3>
+                        <div class="grid grid-cols-2 gap-3 text-gray-700">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-brand-primary mr-2 text-sm"></i>
+                                <span>Downtown</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-brand-primary mr-2 text-sm"></i>
+                                <span>Midtown</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-brand-primary mr-2 text-sm"></i>
+                                <span>Suburbs</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-brand-primary mr-2 text-sm"></i>
+                                <span>East Side</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-brand-primary mr-2 text-sm"></i>
+                                <span>West Side</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-brand-primary mr-2 text-sm"></i>
+                                <span>North County</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">
+                            Don't see your area? Call us! We often service surrounding areas.
+                        </p>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-brand-secondary mb-4 flex items-center">
+                            <i class="fas fa-clock text-brand-primary mr-3"></i>
+                            Business Hours
+                        </h3>
+                        <div class="space-y-3 text-gray-700">
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Monday - Friday:</span>
+                                <span>8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Saturday:</span>
+                                <span>9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Sunday:</span>
+                                <span>Closed (Emergency service available)</span>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-gray-200">
+                                <div class="flex justify-between text-brand-primary font-bold">
+                                    <span>Emergency Service:</span>
+                                    <span>24/7 Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-brand-secondary mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <summary class="font-bold text-lg text-brand-secondary cursor-pointer hover:text-brand-primary transition">
+                        How quickly can you provide a quote?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        We provide free quotes within 2 hours during business hours. For urgent requests, call us directly at (555) 555-CLEAN for immediate assistance.
+                    </p>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <summary class="font-bold text-lg text-brand-secondary cursor-pointer hover:text-brand-primary transition">
+                        Do you bring your own cleaning supplies and equipment?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        Yes! We bring all professional-grade equipment and eco-friendly cleaning products. If you prefer us to use specific products you provide, just let us know.
+                    </p>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <summary class="font-bold text-lg text-brand-secondary cursor-pointer hover:text-brand-primary transition">
+                        What if I'm not satisfied with the cleaning?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        We offer a 100% satisfaction guarantee. If you're not happy with any aspect of our service, we'll return within 24 hours to re-clean at no additional charge.
+                    </p>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <summary class="font-bold text-lg text-brand-secondary cursor-pointer hover:text-brand-primary transition">
+                        Are your cleaners insured and background-checked?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        Absolutely. All our team members undergo thorough background checks, drug testing, and are covered by our $2 million liability insurance and bonding.
+                    </p>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <summary class="font-bold text-lg text-brand-secondary cursor-pointer hover:text-brand-primary transition">
+                        Do I need to be home during the cleaning?
+                    </summary>
+                    <p class="mt-4 text-gray-700">
+                        Not at all! Many of our clients provide us with access instructions and are away during cleaning. We can work around your schedule for maximum convenience.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media & Final CTA -->
+    <section class="py-16 bg-brand-primary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Connect With Us</h2>
+            <div class="flex justify-center space-x-6 mb-8 text-4xl">
+                <a href="https://facebook.com" target="_blank" class="hover:opacity-80 transition">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="hover:opacity-80 transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="hover:opacity-80 transition">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="hover:opacity-80 transition">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="hover:opacity-80 transition">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <p class="text-xl mb-6">Follow us for cleaning tips, special offers, and more!</p>
+            <a href="tel:5555555326" class="inline-block bg-white text-brand-primary font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition text-lg">
+                <i class="fas fa-phone mr-2"></i>Call Now: (555) 555-CLEAN
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-secondary text-gray-300 py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Elite Cleaning Services. All Rights Reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-brand-primary transition">Privacy Policy</a>
+                <a href="#" class="hover:text-brand-primary transition">Terms of Service</a>
+                <a href="#" class="hover:text-brand-primary transition">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you within 2 hours.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
+
