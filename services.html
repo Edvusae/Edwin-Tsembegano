@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Elite Cleaning Services</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#00ADB5',
+                        'brand-secondary': '#393E46',
+                        'brand-background': '#EEEEEE',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-brand-primary">Elite Clean</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-brand-primary transition">Home</a>
+                <a href="services.html" class="text-brand-primary font-semibold">Services</a>
+                <a href="why-us.html" class="text-gray-600 hover:text-brand-primary transition">Why Us</a>
+                <a href="contact.html" class="text-gray-600 hover:text-brand-primary transition">Contact</a>
+            </div>
+            <a href="index.html#booking-form" class="hidden md:inline-block bg-brand-primary text-white font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-brand-primary to-teal-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Our Cleaning Services</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                Professional cleaning solutions tailored to your needs. From residential deep cleans to commercial maintenance, we've got you covered.
+            </p>
+        </div>
+    </section>
+
+    <!-- Service Categories -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            
+            <!-- Residential Cleaning -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <div class="inline-block p-4 bg-brand-primary/10 rounded-full mb-4">
+                        <i class="fas fa-home text-5xl text-brand-primary"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-brand-secondary mb-4">Residential Cleaning</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Your home deserves the best care. We provide thorough, reliable cleaning services that keep your living space pristine.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Regular House Cleaning -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="text-brand-primary text-4xl mb-4">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-secondary mb-3">Regular House Cleaning</h3>
+                        <p class="text-gray-600 mb-4">
+                            Weekly, bi-weekly, or monthly cleaning to maintain a spotless home.
+                        </p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Dusting all surfaces</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Vacuuming & mopping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Kitchen & bathroom sanitization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Trash removal</span>
+                            </li>
+                        </ul>
+                        <div class="text-3xl font-bold text-brand-primary mb-4">From $120</div>
+                        <a href="contact.html" class="block text-center bg-brand-primary text-white py-3 rounded-lg hover:opacity-90 transition">Request Quote</a>
+                    </div>
+
+                    <!-- Deep Cleaning -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-2 border-brand-primary">
+                        <div class="bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">POPULAR</div>
+                        <div class="text-brand-primary text-4xl mb-4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-secondary mb-3">Deep Cleaning</h3>
+                        <p class="text-gray-600 mb-4">
+                            Intensive top-to-bottom cleaning for homes that need extra attention.
+                        </p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Everything in regular cleaning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Baseboards & window sills</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Inside appliances & cabinets</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Light fixtures & ceiling fans</span>
+                            </li>
+                        </ul>
+                        <div class="text-3xl font-bold text-brand-primary mb-4">From $250</div>
+                        <a href="contact.html" class="block text-center bg-brand-primary text-white py-3 rounded-lg hover:opacity-90 transition">Request Quote</a>
+                    </div>
+
+                    <!-- Move In/Out Cleaning -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="text-brand-primary text-4xl mb-4">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-secondary mb-3">Move In/Out Cleaning</h3>
+                        <p class="text-gray-600 mb-4">
+                            Perfect for relocations. Leave your old place spotless or move into a fresh space.
+                        </p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Complete property cleaning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>All rooms & closets</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Inside all cabinets & drawers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Window cleaning included</span>
+                            </li>
+                        </ul>
+                        <div class="text-3xl font-bold text-brand-primary mb-4">From $300</div>
+                        <a href="contact.html" class="block text-center bg-brand-primary text-white py-3 rounded-lg hover:opacity-90 transition">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial Cleaning -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <div class="inline-block p-4 bg-brand-primary/10 rounded-full mb-4">
+                        <i class="fas fa-building text-5xl text-brand-primary"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-brand-secondary mb-4">Commercial Cleaning</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Professional cleaning solutions for businesses. We work around your schedule to minimize disruption.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Office Cleaning -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="text-brand-primary text-4xl mb-4">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-secondary mb-3">Office Cleaning</h3>
+                        <p class="text-gray-600 mb-4">
+                            Daily, nightly, or weekly office maintenance to keep your workspace professional.
+                        </p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Desk & workstation cleaning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Floor care (vacuum/mop)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Restroom sanitization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Break room cleaning</span>
+                            </li>
+                        </ul>
+                        <div class="text-3xl font-bold text-brand-primary mb-4">Custom Quote</div>
+                        <a href="contact.html" class="block text-center bg-brand-primary text-white py-3 rounded-lg hover:opacity-90 transition">Contact Us</a>
+                    </div>
+
+                    <!-- Restaurant Cleaning -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="text-brand-primary text-4xl mb-4">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-secondary mb-3">Restaurant Cleaning</h3>
+                        <p class="text-gray-600 mb-4">
+                            Health-code compliant cleaning for food service establishments.
+                        </p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Kitchen deep cleaning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Grease removal & degreasing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Dining area maintenance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Hood & exhaust cleaning</span>
+                            </li>
+                        </ul>
+                        <div class="text-3xl font-bold text-brand-primary mb-4">Custom Quote</div>
+                        <a href="contact.html" class="block text-center bg-brand-primary text-white py-3 rounded-lg hover:opacity-90 transition">Contact Us</a>
+                    </div>
+
+                    <!-- Retail Cleaning -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                        <div class="text-brand-primary text-4xl mb-4">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-secondary mb-3">Retail Cleaning</h3>
+                        <p class="text-gray-600 mb-4">
+                            Keep your store inviting with regular professional cleaning services.
+                        </p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Floor care & polish</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Window & glass cleaning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Fitting room sanitization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-brand-primary mt-1 mr-2"></i>
+                                <span>Display dusting</span>
+                            </li>
+                        </ul>
+                        <div class="text-3xl font-bold text-brand-primary mb-4">Custom Quote</div>
+                        <a href="contact.html" class="block text-center bg-brand-primary text-white py-3 rounded-lg hover:opacity-90 transition">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialized Services -->
+            <div>
+                <div class="text-center mb-12">
+                    <div class="inline-block p-4 bg-brand-primary/10 rounded-full mb-4">
+                        <i class="fas fa-tools text-5xl text-brand-primary"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-brand-secondary mb-4">Specialized Services</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Advanced cleaning solutions for unique needs using professional-grade equipment.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                        <div class="text-brand-primary text-3xl mb-3">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-secondary mb-2">Carpet & Upholstery</h4>
+                        <p class="text-gray-600 text-sm">Professional steam cleaning for carpets, rugs, and furniture.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                        <div class="text-brand-primary text-3xl mb-3">
+                            <i class="fas fa-window-maximize"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-secondary mb-2">Window Cleaning</h4>
+                        <p class="text-gray-600 text-sm">Crystal-clear windows inside and out, any height.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                        <div class="text-brand-primary text-3xl mb-3">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-secondary mb-2">Air Duct Cleaning</h4>
+                        <p class="text-gray-600 text-sm">Improve air quality with thorough HVAC system cleaning.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                        <div class="text-brand-primary text-3xl mb-3">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-secondary mb-2">Pressure Washing</h4>
+                        <p class="text-gray-600 text-sm">Exterior cleaning for driveways, decks, and siding.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                        <div class="text-brand-primary text-3xl mb-3">
+                            <i class="fas fa-bacterium"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-secondary mb-2">Disinfection Services</h4>
+                        <p class="text-gray-600 text-sm">Medical-grade sanitization for high-touch areas.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                        <div class="text-brand-primary text-3xl mb-3">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-secondary mb-2">Post-Construction</h4>
+                        <p class="text-gray-600 text-sm">Debris removal and final cleaning after renovations.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                        <div class="text-brand-primary text-3xl mb-3">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-secondary mb-2">Hoarding Cleanup</h4>
+                        <p class="text-gray-600 text-sm">Compassionate, thorough cleaning for difficult situations.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+                        <div class="text-brand-primary text-3xl mb-3">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-secondary mb-2">Floor Refinishing</h4>
+                        <p class="text-gray-600 text-sm">Restore hardwood and tile floors to their original beauty.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-brand-primary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">Ready to Experience Elite Cleaning?</h2>
+            <p class="text-xl mb-8">Get a free, no-obligation quote today</p>
+            <a href="contact.html" class="inline-block bg-white text-brand-primary font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition text-lg">
+                Get Free Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-secondary text-gray-300 py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Elite Cleaning Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
